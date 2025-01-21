@@ -1,28 +1,27 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Giant.com - Reserved for Future Use</title>
-  <!-- Load a clean, modern Google Font -->
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+  <title>Giant.com</title>
   <style>
     body {
       margin: 0;
       padding: 0;
-      font-family: 'Open Sans', sans-serif;
+      font-family: sans-serif;
       text-align: center;
     }
     .container {
-      margin-top: 60px;     }
+      margin-top: 60px;
+    }
     .giant {
       font-size: 2em;
-      font-weight: bold; 
+      font-weight: bold;
     }
     .normal-text {
       font-size: 1.1em;
       margin: 0.6em 0;
-      font-weight: 400; 
+      font-weight: 400;
     }
     a {
       color: #333;
@@ -37,9 +36,30 @@
   <div class="container">
     <div class="giant">GIANT.com</div>
     <div class="normal-text">Reserved for Future Use</div>
-    <div class="normal-text">
-      <a href="mailto:support@giant.com">support@giant.com</a>
+    <div class="normal-text" id="email-container">
+      <!-- The email link will be added by JavaScript below. -->
     </div>
   </div>
+
+  <script>
+    // Define parts of the email address separately
+    const localPart = "support";
+    const domain = "giant";
+    const tld = "com";
+
+    // Construct the email address
+    const emailAddress = localPart + "@" + domain + "." + tld;
+
+    // Construct the mailto link
+    const mailtoLink = "mailto:" + emailAddress;
+
+    // Create a link element
+    const link = document.createElement("a");
+    link.href = mailtoLink;
+    link.textContent = emailAddress;
+
+    // Append the link to the email container
+    document.getElementById("email-container").appendChild(link);
+  </script>
 </body>
 </html>
