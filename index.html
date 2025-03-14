@@ -1,55 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: Verdana, sans-serif;
-      text-align: center;
-    }
-    .container {
-      margin-top: 60px;
-    }
-    .giant {
-      font-size: 2em;
-      font-weight: bold; 
-    }
-    .normal-text {
-      font-size: 1.1em;
-      margin: 0.6em 0;
-      font-weight: 400; 
-    }
-    a {
-      color: #333;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giant.com - For Sale</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1A3C34, #fff);
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            color: #fff;
+        }
+
+        .hero h1 {
+            font-size: 60px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 22px;
+            margin-bottom: 25px;
+        }
+
+        .btn {
+            background: #FF8C00;
+            color: #fff;
+            padding: 15px 35px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-size: 20px;
+            font-weight: 600;
+            transition: transform 0.2s;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+        }
+
+        /* Benefits Section */
+        .benefits {
+            padding: 70px 20px;
+            background: #F5F5F5;
+            text-align: center;
+        }
+
+        .benefits h2 {
+            font-size: 40px;
+            margin-bottom: 50px;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .benefit-item {
+            padding: 25px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .benefit-item h3 {
+            font-size: 22px;
+            margin: 15px 0;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .hero p {
+                font-size: 18px;
+            }
+
+            .benefits h2 {
+                font-size: 30px;
+            }
+
+            .btn {
+                padding: 12px 25px;
+                font-size: 16px;
+            }
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <div class="giant">Giant.com</div>
-    <div class="normal-text">Exploring the World of Giants: Technology, Nature, Innovation, Crypto...</div>
-    <div class="normal-text" id="email-container"></div>
-  </div>
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Giant.com</h1>
+        <p>A Domain That Stands Tall Above the Rest</p>
+        <a href="mailto:support@giant.com" class="btn">Make an Offer</a>
+    </section>
 
-  <script>
-    const localPart = "support";
-    const domain = "giant";
-    const tld = "com";
-
-    const emailAddress = localPart + "@" + domain + "." + tld;
-    const mailtoLink = "mailto:" + emailAddress;
-
-    const link = document.createElement("a");
-    link.href = mailtoLink;
-    link.textContent = emailAddress;
-
-    document.getElementById("email-container").appendChild(link);
-  </script>
+    <!-- Benefits Section -->
+    <section class="benefits">
+        <h2>Why Giant.com?</h2>
+        <div class="benefits-grid">
+            <div class="benefit-item">
+                <h3>Bold & Powerful</h3>
+                <p>A short, commanding name that exudes strength and authority.</p>
+            </div>
+            <div class="benefit-item">
+                <h3>Endless Versatility</h3>
+                <p>Ideal for tech, retail, fitness, media, or any ambitious brand.</p>
+            </div>
+            <div class="benefit-item">
+                <h3>Premium Asset</h3>
+                <p>A rare one-word .com with instant recognition and market value.</p>
+            </div>
+            <div class="benefit-item">
+                <h3>SEO Advantage</h3>
+                <p>Stand out in search results with a memorable, authoritative domain.</p>
+            </div>
+            <div class="benefit-item">
+                <h3>Brand Dominance</h3>
+                <p>Position your business as a leader with a name that demands attention.</p>
+            </div>
+            <div class="benefit-item">
+                <h3>Global Reach</h3>
+                <p>A universally understood word that resonates across markets.</p>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
